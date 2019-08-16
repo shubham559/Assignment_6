@@ -47,5 +47,8 @@ namespace Assignment_6
         public string CPU_speed { get; set; }
         public string web_cam { get; set; }
 
+
+        
+
     }
 }

@@ -363,9 +363,9 @@
             this.Manufacturer_label.AutoSize = true;
             this.Manufacturer_label.Location = new System.Drawing.Point(6, 115);
             this.Manufacturer_label.Name = "Manufacturer_label";
-            this.Manufacturer_label.Size = new System.Drawing.Size(85, 20);
+            this.Manufacturer_label.Size = new System.Drawing.Size(104, 20);
             this.Manufacturer_label.TabIndex = 0;
-            this.Manufacturer_label.Text = "Product ID";
+            this.Manufacturer_label.Text = "Manufacturer";
             // 
             // OS_label
             // 
@@ -655,6 +655,7 @@
             this.Name = "Product_Info_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Info";
+            this.Activated += new System.EventHandler(this.Product_info_activated);
             this.Load += new System.EventHandler(this.Product_Info_form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

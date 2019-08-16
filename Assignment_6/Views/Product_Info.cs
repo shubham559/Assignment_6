@@ -54,6 +54,25 @@ namespace Assignment_6.Views
             Application.Exit();
         }
 
-        
+        private void Product_info_activated(object sender, EventArgs e)
+        {
+            product_id_result_label.Text = Program.dollar_Computer_Data.Product_Id.ToString();
+            cost_label_result.Text = Program.dollar_Computer_Data.Cost.ToString();
+            condition_label_result.Text = Program.dollar_Computer_Data.Condition.ToString();
+            Platform_label_result.Text = Program.dollar_Computer_Data.Platform.ToString();
+            OS_result_label.Text = Program.dollar_Computer_Data.OS.ToString();
+            Manufacturer_label_result.Text = Program.dollar_Computer_Data.Manufacturer.ToString();
+            Model_label_result.Text = Program.dollar_Computer_Data.Model.ToString();
+            Memory_label_result.Text = Program.dollar_Computer_Data.Memory.ToString();
+            LCD_Size.Text = Program.dollar_Computer_Data.LCD_Size.ToString();
+            HDD_result_label.Text = Program.dollar_Computer_Data.Hdd.ToString();
+            CPU_Brand_label.Text = Program.dollar_Computer_Data.CPU_Brand.ToString();
+            CPU_NUMBER_RESULT_LABEL.Text = Program.dollar_Computer_Data.CPU_number.ToString();
+            GPU_TYPE_LABEL_RESULT.Text = Program.dollar_Computer_Data.GPU_Type.ToString();
+            CPU_TYPE_LABEL_result.Text = Program.dollar_Computer_Data.CPU_Type.ToString();
+            CPU_SPEED_LABEL.Text = Program.dollar_Computer_Data.CPU_speed.ToString();
+            web_Cam_label_result.Text = Program.dollar_Computer_Data.web_cam.ToString();
+
+        }
     }
 }
