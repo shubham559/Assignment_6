@@ -29,6 +29,12 @@ namespace Assignment_6.Views
         private void Start_order_button_Click(object sender, EventArgs e)
         {
             Program.selectform.Show();
+            this.Hide();
+        }
+
+        private void Start_Form_Load(object sender, EventArgs e)
+        {
+            Size = new Size(600,500);
         }
     }
 }

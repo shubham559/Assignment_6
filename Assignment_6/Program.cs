@@ -17,6 +17,7 @@ namespace Assignment_6.Views
         public static Order order_form;
         public static About_form about_form;
         public static product product;
+        public static Dollar_Computer_Data dollar_Computer_Data;
 
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace Assignment_6.Views
             order_form = new Order();
             about_form = new About_form();
             product = new product();
+            dollar_Computer_Data = new Dollar_Computer_Data();
 
 
 

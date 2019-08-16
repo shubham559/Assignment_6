@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dollar_Computer_Data.cs" />
     <Compile Include="Models\Dollar_Computer_Context.cs" />
     <Compile Include="Models\product.cs" />
     <Compile Include="Views\About_form.cs">

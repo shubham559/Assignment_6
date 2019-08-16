@@ -655,6 +655,7 @@
             this.Name = "Product_Info_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_Info";
+            this.Load += new System.EventHandler(this.Product_Info_form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.General_info_groupBox.ResumeLayout(false);

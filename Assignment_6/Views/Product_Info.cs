@@ -17,6 +17,11 @@ namespace Assignment_6.Views
             InitializeComponent();
         }
 
+        private void Product_Info_form_Load(object sender, EventArgs e)
+        {
+            Size = new Size(750,550);
+        }
+
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
           
@@ -48,5 +53,7 @@ namespace Assignment_6.Views
         {
             Application.Exit();
         }
+
+        
     }
 }
