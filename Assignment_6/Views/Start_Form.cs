@@ -25,5 +25,10 @@ namespace Assignment_6.Views
         {
             Application.Exit();
         }
+
+        private void Start_order_button_Click(object sender, EventArgs e)
+        {
+            Program.selectform.Show();
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.Start_order_button.TabIndex = 0;
             this.Start_order_button.Text = "Start a New Order";
             this.Start_order_button.UseVisualStyleBackColor = true;
+            this.Start_order_button.Click += new System.EventHandler(this.Start_order_button_Click);
             // 
             // Open_saved_button
             // 

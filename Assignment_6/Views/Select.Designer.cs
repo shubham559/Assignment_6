@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Product_Data_Grid_View = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +61,12 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Cancel_button = new System.Windows.Forms.Button();
+            this.Next_button = new System.Windows.Forms.Button();
+            this.Result_Show_select_form = new System.Windows.Forms.Label();
+            this.Header_label_select = new System.Windows.Forms.Label();
+            this.Selection_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Product_Data_Grid_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -111,16 +115,15 @@
             this.webcamDataGridViewTextBoxColumn});
             this.Product_Data_Grid_View.DataSource = this.productBindingSource;
             this.Product_Data_Grid_View.Location = new System.Drawing.Point(7, 64);
+            this.Product_Data_Grid_View.MultiSelect = false;
             this.Product_Data_Grid_View.Name = "Product_Data_Grid_View";
             this.Product_Data_Grid_View.ReadOnly = true;
             this.Product_Data_Grid_View.RowTemplate.Height = 28;
             this.Product_Data_Grid_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Product_Data_Grid_View.Size = new System.Drawing.Size(941, 422);
             this.Product_Data_Grid_View.TabIndex = 0;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Assignment_6.Models.product);
+            this.Product_Data_Grid_View.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_data_grid_view_cell_click);
+            this.Product_Data_Grid_View.SelectionChanged += new System.EventHandler(this.Product_datagrid_view_selection_changed);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -370,9 +373,13 @@
             this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
             this.webcamDataGridViewTextBoxColumn.Width = 140;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Assignment_6.Models.product);
+            // 
             // Cancel_button
             // 
-            this.Cancel_button.Location = new System.Drawing.Point(32, 560);
+            this.Cancel_button.Location = new System.Drawing.Point(639, 560);
             this.Cancel_button.Name = "Cancel_button";
             this.Cancel_button.Size = new System.Drawing.Size(143, 52);
             this.Cancel_button.TabIndex = 1;
@@ -380,12 +387,57 @@
             this.Cancel_button.UseVisualStyleBackColor = true;
             this.Cancel_button.Click += new System.EventHandler(this.Cancel_button_Click);
             // 
+            // Next_button
+            // 
+            this.Next_button.Location = new System.Drawing.Point(805, 560);
+            this.Next_button.Name = "Next_button";
+            this.Next_button.Size = new System.Drawing.Size(143, 52);
+            this.Next_button.TabIndex = 1;
+            this.Next_button.Text = "Next";
+            this.Next_button.UseVisualStyleBackColor = true;
+            this.Next_button.Click += new System.EventHandler(this.Next_button_Click);
+            // 
+            // Result_Show_select_form
+            // 
+            this.Result_Show_select_form.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Result_Show_select_form.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Result_Show_select_form.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Result_Show_select_form.Location = new System.Drawing.Point(185, 550);
+            this.Result_Show_select_form.Name = "Result_Show_select_form";
+            this.Result_Show_select_form.Size = new System.Drawing.Size(429, 62);
+            this.Result_Show_select_form.TabIndex = 2;
+            this.Result_Show_select_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Header_label_select
+            // 
+            this.Header_label_select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Header_label_select.Location = new System.Drawing.Point(13, 13);
+            this.Header_label_select.Name = "Header_label_select";
+            this.Header_label_select.Size = new System.Drawing.Size(416, 38);
+            this.Header_label_select.TabIndex = 3;
+            this.Header_label_select.Text = "Dollar Computer Hardware List";
+            this.Header_label_select.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // Selection_label
+            // 
+            this.Selection_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Selection_label.Location = new System.Drawing.Point(12, 563);
+            this.Selection_label.Name = "Selection_label";
+            this.Selection_label.Size = new System.Drawing.Size(155, 38);
+            this.Selection_label.TabIndex = 3;
+            this.Selection_label.Text = "Your Selection";
+            this.Selection_label.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // Select
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 635);
             this.ControlBox = false;
+            this.Controls.Add(this.Selection_label);
+            this.Controls.Add(this.Header_label_select);
+            this.Controls.Add(this.Result_Show_select_form);
+            this.Controls.Add(this.Next_button);
             this.Controls.Add(this.Cancel_button);
             this.Controls.Add(this.Product_Data_Grid_View);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -437,5 +489,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button Cancel_button;
+        private System.Windows.Forms.Button Next_button;
+        private System.Windows.Forms.Label Result_Show_select_form;
+        private System.Windows.Forms.Label Header_label_select;
+        private System.Windows.Forms.Label Selection_label;
     }
 }
