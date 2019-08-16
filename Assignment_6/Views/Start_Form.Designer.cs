@@ -1,4 +1,4 @@
-﻿namespace Assignment_6
+﻿namespace Assignment_6.Views
 {
     partial class Start_Form
     {
@@ -92,6 +92,7 @@
             this.Controls.Add(this.Exit_button);
             this.Controls.Add(this.Open_saved_button);
             this.Controls.Add(this.Start_order_button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Start_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

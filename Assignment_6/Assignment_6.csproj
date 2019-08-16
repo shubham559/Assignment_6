@@ -36,8 +36,17 @@
     <ApplicationIcon>dollar_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,24 +58,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Start_Form.cs">
+    <Compile Include="Models\Dollar_Computer_Context.cs" />
+    <Compile Include="Models\product.cs" />
+    <Compile Include="Views\About_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start_Form.Designer.cs">
+    <Compile Include="Views\About_form.Designer.cs">
+      <DependentUpon>About_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Product_Info.Designer.cs">
+      <DependentUpon>Product_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Select.Designer.cs">
+      <DependentUpon>Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Start_Form.Designer.cs">
       <DependentUpon>Start_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Splash_form.cs">
+    <Compile Include="Views\Splash_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Splash_form.Designer.cs">
+    <Compile Include="Views\Splash_form.Designer.cs">
       <DependentUpon>Splash_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Splash_form.resx">
+    <EmbeddedResource Include="Views\About_form.resx">
+      <DependentUpon>About_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product_Info.resx">
+      <DependentUpon>Product_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Select.resx">
+      <DependentUpon>Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Splash_form.resx">
       <DependentUpon>Splash_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start_Form.resx">
+    <EmbeddedResource Include="Views\Start_Form.resx">
       <DependentUpon>Start_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,6 +125,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Assignment_6.Models.product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

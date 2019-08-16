@@ -1,4 +1,4 @@
-﻿namespace Assignment_6
+﻿namespace Assignment_6.Views
 {
     partial class Splash_form
     {
