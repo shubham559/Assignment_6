@@ -10,11 +10,43 @@ using System.Windows.Forms;
 
 namespace Assignment_6.Views
 {
-    public partial class Product_Info : Form
+    public partial class Product_Info_form : Form
     {
-        public Product_Info()
+        public Product_Info_form()
         {
             InitializeComponent();
+        }
+
+        private void helpToolStripButton_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.about_form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CPU_NUMBER_Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cancel_button_product_info_form_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

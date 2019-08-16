@@ -13,7 +13,7 @@ namespace Assignment_6.Views
         public static Splash_form Splashform;
         public static Start_Form startform;
         public static Select selectform;
-        public static Product_Info Product_info_form;
+        public static Product_Info_form Product_info_form;
         public static Order order_form;
         public static About_form about_form;
         public static product product;
@@ -32,7 +32,7 @@ namespace Assignment_6.Views
             Splashform = new Splash_form();
             startform = new Start_Form();
             selectform = new Select();
-            Product_info_form = new Product_Info();
+            Product_info_form = new Product_Info_form();
             order_form = new Order();
             about_form = new About_form();
             product = new product();
