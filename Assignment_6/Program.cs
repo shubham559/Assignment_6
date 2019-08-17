@@ -15,10 +15,10 @@ namespace Assignment_6.Views
         public static Select selectform;
         public static Product_Info_form Product_info_form;
         public static Order order_form;
-        public static About_form about_form;
+     //   public static Aboutform aboutform;
         public static product product;
         public static Dollar_Computer_Data dollar_Computer_Data;
-
+       // public static Aboutform aboutform;
 
         /// <summary>
         /// The main entry point for the application.
@@ -35,7 +35,7 @@ namespace Assignment_6.Views
             selectform = new Select();
             Product_info_form = new Product_Info_form();
             order_form = new Order();
-            about_form = new About_form();
+          //  aboutform = new Aboutform();
             product = new product();
             dollar_Computer_Data = new Dollar_Computer_Data();
 

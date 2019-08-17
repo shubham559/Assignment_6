@@ -126,7 +126,7 @@ namespace Assignment_6.Views
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.about_form.ShowDialog();
+            //Program.aboutform.ShowDialog();
             this.Hide();
         }
 
@@ -240,9 +240,12 @@ namespace Assignment_6.Views
             }
         }
 
-
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Order Is being Printed:" + "\n\nPlease wait", "Wait",
+    MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 
 
-}
 }

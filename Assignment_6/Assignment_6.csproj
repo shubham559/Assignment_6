@@ -42,6 +42,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,15 +60,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aboutform.Designer.cs">
+      <DependentUpon>Aboutform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dollar_Computer_Data.cs" />
     <Compile Include="Models\Dollar_Computer_Context.cs" />
     <Compile Include="Models\product.cs" />
-    <Compile Include="Views\About_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\About_form.Designer.cs">
-      <DependentUpon>About_form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Order.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +101,8 @@
     <Compile Include="Views\Splash_form.Designer.cs">
       <DependentUpon>Splash_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\About_form.resx">
-      <DependentUpon>About_form.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Aboutform.resx">
+      <DependentUpon>Aboutform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>

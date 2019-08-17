@@ -83,7 +83,7 @@
             this.CPU_TYPE_LABEL_result = new System.Windows.Forms.Label();
             this.CPU_SPEED_LABEL = new System.Windows.Forms.Label();
             this.web_Cam_label_result = new System.Windows.Forms.Label();
-            this.CPU_RESULT_LABEL = new System.Windows.Forms.Label();
+            this.CPUSpeed_RESULT_LABEL = new System.Windows.Forms.Label();
             this.WEB_CAM_label = new System.Windows.Forms.Label();
             this.Confirm_your_selection_label = new System.Windows.Forms.Label();
             this.Cancel_button_product_info_form = new System.Windows.Forms.Button();
@@ -129,7 +129,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -166,8 +166,9 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -430,7 +431,7 @@
             this.Tech_spces_groupBox.Controls.Add(this.CPU_Brand_label);
             this.Tech_spces_groupBox.Controls.Add(this.CPU_TYPE_LABEL_result);
             this.Tech_spces_groupBox.Controls.Add(this.Memory_label);
-            this.Tech_spces_groupBox.Controls.Add(this.CPU_RESULT_LABEL);
+            this.Tech_spces_groupBox.Controls.Add(this.CPUSpeed_RESULT_LABEL);
             this.Tech_spces_groupBox.Controls.Add(this.web_Cam_label_result);
             this.Tech_spces_groupBox.Controls.Add(this.CPU_Brand_label_result);
             this.Tech_spces_groupBox.Controls.Add(this.CPU_NUMBER_RESULT_LABEL);
@@ -578,13 +579,13 @@
             this.web_Cam_label_result.TabIndex = 0;
             this.web_Cam_label_result.Click += new System.EventHandler(this.label4_Click);
             // 
-            // CPU_RESULT_LABEL
+            // CPUSpeed_RESULT_LABEL
             // 
-            this.CPU_RESULT_LABEL.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.CPU_RESULT_LABEL.Location = new System.Drawing.Point(439, 181);
-            this.CPU_RESULT_LABEL.Name = "CPU_RESULT_LABEL";
-            this.CPU_RESULT_LABEL.Size = new System.Drawing.Size(159, 46);
-            this.CPU_RESULT_LABEL.TabIndex = 0;
+            this.CPUSpeed_RESULT_LABEL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CPUSpeed_RESULT_LABEL.Location = new System.Drawing.Point(439, 181);
+            this.CPUSpeed_RESULT_LABEL.Name = "CPUSpeed_RESULT_LABEL";
+            this.CPUSpeed_RESULT_LABEL.Size = new System.Drawing.Size(159, 46);
+            this.CPUSpeed_RESULT_LABEL.TabIndex = 0;
             // 
             // WEB_CAM_label
             // 
@@ -624,6 +625,7 @@
             this.Select_another_product_button.TabIndex = 4;
             this.Select_another_product_button.Text = "Select Another Product";
             this.Select_another_product_button.UseVisualStyleBackColor = true;
+            this.Select_another_product_button.Click += new System.EventHandler(this.Select_another_product_button_Click);
             // 
             // Next_button_product_info_form
             // 
@@ -634,7 +636,7 @@
             this.Next_button_product_info_form.TabIndex = 4;
             this.Next_button_product_info_form.Text = "Next";
             this.Next_button_product_info_form.UseVisualStyleBackColor = true;
-            this.Next_button_product_info_form.Click += new System.EventHandler(this.Cancel_button_product_info_form_Click);
+            this.Next_button_product_info_form.Click += new System.EventHandler(this.Next_button_product_info_form_Click);
             // 
             // Product_Info_form
             // 
@@ -718,7 +720,7 @@
         private System.Windows.Forms.Label CPU_Brand_label;
         private System.Windows.Forms.Label CPU_TYPE_LABEL_result;
         private System.Windows.Forms.Label Memory_label;
-        private System.Windows.Forms.Label CPU_RESULT_LABEL;
+        private System.Windows.Forms.Label CPUSpeed_RESULT_LABEL;
         private System.Windows.Forms.Label web_Cam_label_result;
         private System.Windows.Forms.Label CPU_Brand_label_result;
         private System.Windows.Forms.Label CPU_NUMBER_RESULT_LABEL;

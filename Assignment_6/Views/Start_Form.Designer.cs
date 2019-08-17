@@ -33,6 +33,7 @@
             this.Open_saved_button = new System.Windows.Forms.Button();
             this.Exit_button = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.dollar_Computer_openFileDialogopenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.Open_saved_button.TabIndex = 0;
             this.Open_saved_button.Text = "Open a Saved Order";
             this.Open_saved_button.UseVisualStyleBackColor = true;
+            this.Open_saved_button.Click += new System.EventHandler(this.Open_saved_button_Click);
             // 
             // Exit_button
             // 
@@ -81,6 +83,10 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
+            // 
+            // dollar_Computer_openFileDialogopenFileDialog1
+            // 
+            this.dollar_Computer_openFileDialogopenFileDialog1.FileName = "openFileDialog1";
             // 
             // Start_Form
             // 
@@ -110,6 +116,7 @@
         private System.Windows.Forms.Button Open_saved_button;
         private System.Windows.Forms.Button Exit_button;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.OpenFileDialog dollar_Computer_openFileDialogopenFileDialog1;
     }
 }
 
